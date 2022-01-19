@@ -57,28 +57,38 @@
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="button-close" data-modal-close>&#xd7;</button>
-            <b class="modal-item">ОСТАВЬТЕ СВОИ ДАННЫЕ, МЫ ВАМ ПЕРЕЗВОНИМ</b>
+            <b class="modal-item">Оставьте свои данные, мы вам перезвоним</b>
             <form class="form">
-                
-                <div class="form-field">
-                    <label for="name">Имя</label>
-                    <input type="text" name="name" id="name">
-                </div>
-                <div class="form-field">
-                    <label for="tel">Телефон</label>
-                    <input type="tel" name="tel" id="tel">
-                </div>
-                <div class="form-field">
-                    <label for="email">Почта</label>
-                    <input type="email" name="email" id="email">
-                </div>
-                <div class="form-field">
-                    <label for="comment" class="modal-comment">Коментарии</label>
-                    <textarea name="comment" id="comment" autocomplete="off" placeholder="Введите текст" class="comments"></textarea>
-                </div> 
-                <input type="checkbox" name="agreement" id="agreement">
-                <label for="agreement" class="last">Соглашаюсь с рассылкой и принимаю<a href="">Условия договора</a></label>
-                <button type="submit">Отправить</button>
+             <label class="form-box">
+                 Имя
+                 <input type="text" name="name" class="form-input" required>
+                 <svg class="form-icon">
+                     <use href="./images/icons.svg#icon-person-black-18dp-1-2"></use>
+                 </svg>
+             </label>
+             <label class="form-box">
+                 Телефон
+                  <input type="tel" name="tel" class="form-input" pattern="[0-9]{10}" title="0505505050">
+                <svg class="form-icon">
+                    <use href="./images/icons.svg#icon-phone-black-18dp-1-2"></use>
+                </svg>
+             </label>
+             <label class="form-box">
+                 Почта
+                 <input type="email" name="email" class="form-input" required>
+                <svg class="form-icon">
+                    <use href="./images/icons.svg#icon-email-black-18dp-1-2"></use>
+                </svg>
+             </label>
+             <label class="form-box">
+                 Коментарии
+                 <textarea name="comment" class="form-comment" placeholder="Введите текст"></textarea>
+             </label> 
+                <input type="checkbox" class="policy-checkbox" name="policy" id="policy">
+                <label class="check-box" for="policy">
+                Соглашаюсь с рассылкой и принимаю &nbsp;<a href="">Условия договора</a> 
+                </label>
+                <button type="submit" class="form-button">Отправить</button>
 
             </form>
         </div>
@@ -388,10 +398,20 @@
         </li>
     </ul>
     </div>
+    <div class="wrapper-form">
+        <h2 class="wrapper-form-item">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h2>
+        <form class="footer-form" action="">
+            <input class="footer-input" type="email" name="email" placeholder=" E-mail">
+            <button class="footer-form-btn" type="submit" data-modal-open>
+                Подписаться
+                <svg class="footer-icon">
+                    <use href="images/icons.svg#icon-icon-send-2"></use>
+                </svg>
+            </button>
+        </form>
+    </div>
     </div>
 </footer>
-<script src="./js/modal.js">
-  
-</script>
+<script src="./js/modal.js"></script>
 </body>
 </html>
